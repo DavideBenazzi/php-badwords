@@ -10,8 +10,7 @@
 <body>
 <!-- PHP -->
 <?php 
-    $paragraph = 'lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem ipsum, dolor sit amet consectetur adipisicing elit.Lorem ipsum, dolor sit amet consectetur adipisicing elit.Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-    $badword = 'dolor';
+    $paragraph = 'lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem ipsum, dolor sit amet consectetur adipisicing elit.';
 ?>
 
 <!-- MY PARAGRAPH -->
@@ -24,13 +23,12 @@
 <h3 class="mb20">Length of paragraph : <?php echo strlen($paragraph); ?></h3>
 
 <!-- REPLACE OF PART OF THE STRING -->
-<?php $bad_word = $_GET['word'] ?>
+<?php $bad_word = $_GET['badword']; ?>
 <?php $new_paragraph = str_replace($bad_word , '*****' , $paragraph); ?>
 
 <!-- SOSTITUTION OF 'WORD' WITH '*****' -->
-<h3 class="mb20">Type in the Url "?word=" and the word you want to censure</h3>
-<p class="mb20"><?php echo $new_paragraph ?></p>
-
-    
+<h3 class="mb20">Type in the Url "?badword=" and the word you want to censure</h3>
+<p class="mb20"><?php echo $new_paragraph; ?></p>
+   
 </body>
 </html>
